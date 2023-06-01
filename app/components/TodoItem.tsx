@@ -10,8 +10,7 @@ type TodoItemProps = {
 }
 
 const TodoItem = ({ todo }: TodoItemProps) => {
-  const [isPending, startTransition] = useTransition()
-  console.log('ON THE CLIENT')
+  const [_isPending, startTransition] = useTransition()
   return (
     <li className='flex items-center gap-3'>
       <input

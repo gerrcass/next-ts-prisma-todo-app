@@ -1,15 +1,11 @@
 import prisma from './prisma'
 
 export async function getTodos() {
-  console.log('ENTRE')
   try {
-    console.log('LO INTENTE')
     const todos = await prisma.todo.findMany()
-    console.log('HERE')
-    console.log(todos)
     return { todos }
   } catch (error) {
-    console.log(error)
+    console.log('ERR>>', error)
     return { error }
   }
 }

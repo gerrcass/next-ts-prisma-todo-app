@@ -7,8 +7,6 @@ export const dynamic = 'force-dynamic'
 
 const Page = async () => {
   const { todos } = await getTodos()
-  console.log('STARTING')
-
   return (
     <section className='py-20'>
       <div className='container'>
